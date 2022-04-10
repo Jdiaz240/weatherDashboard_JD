@@ -6,6 +6,7 @@ textarea {
 button {
     background-color: lightskyblue;
     color: white;
+    width: 100%;
 }
 
 #city {
@@ -17,4 +18,9 @@ button {
 #week {
     margin: 1%;
     padding:2%;
+}
+
+.card {
+    background-color: cornflowerblue;
+    color: white;
 }
