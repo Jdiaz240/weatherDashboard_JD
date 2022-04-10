@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Weather Dashboard</title>
 </head>
 
@@ -12,7 +13,7 @@
     <header class="container-fluid text-center text-white p-2 weather-header" style="background-color: rgb(45,45,112);">
         <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder;">Weather Dashboard</h1>
     </header>
-    <div class="container-fluid" style="max-width: 1400px">
+    <!-- <div class="container-fluid" style="max-width: 1400px">
         <div class="row">
             <aside class="col-lg-3 pb-3">
                 <h2 id="form-heading" class="mt-1 h3 form-label" style="font-weight: bolder;">
@@ -55,7 +56,20 @@
                 ></section>
             </div>
         </div>
+    </div> -->
+   <div class="container-fluid">
+       <div class="row">
+        <div class="col-4"><h3>SEARCH FOR A CITY</h3>
+        <button id="search">search</button>
+
+        </div>
+        
+        <div class="col-8"><div class="row"><P>this is where city info will go</P></div>
+        <div class="row"><p>this is where actual weather will go</p></div>
     </div>
+       </div>
+
+   </div>
     <script
     src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
     integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
