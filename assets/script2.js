@@ -11,10 +11,8 @@ let searchBar = document.querySelector("#searchbar");
 
 
 function test() {
-    if (searchBtn) {
-        searchHistory.push();
-       } 
-       console.log(searchHistory);
+   
+      
 }
 
 
