@@ -22,4 +22,14 @@ button {
 .card {
     background-color: cornflowerblue;
     color: white;
+    margin: 1%;
+}
+
+ul {
+    list-style: none;
+}
+
+h6 {
+    border: 1px solid black;
+    margin: 1%;
 }
