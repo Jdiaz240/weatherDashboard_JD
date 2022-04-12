@@ -34,3 +34,18 @@ fetch("http://api.openweathermap.org/geo/1.0/direct?q=orlando&appid=f9045589f9bc
 });
 }
 test();
+
+function getApi() {
+
+fetch("http://api.openweathermap.org/data/2.5/onecall?lon=23&lat=56&appid=f9045589f9bcbeef853eb7e06f209ddb")
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    console.log(data);
+    for (let i = 0; i < data.length; i++) {
+        const element = data[i];
+        
+    }
+});
+}
