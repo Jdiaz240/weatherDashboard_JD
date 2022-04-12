@@ -12,7 +12,6 @@ let searchBar = document.querySelector("#searchbar");
 
 function test() {
    
-      
 }
 
 
