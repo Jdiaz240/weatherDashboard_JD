@@ -53,25 +53,13 @@ function getCords() {
 
 function makeList() {
   var city = document.getElementById("Bar").value;
-  var list = document.createElement("li");
-  list.append(city)
-  document.getElementById("history").appendChild(list);
+  var list = document.createElement("button");
+  list.setAttribute("id", "history")
+  list.append(city);
+  document.getElementById("cities").appendChild(list);
+  
+  
 } 
-// // function getCoords(event) {
-// //   event.preventDefault();
-// //   let locat = document.getElementById(searchBar.value);
-// //   console.log(locat);
-// //   fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city +"&limit=5&appid=" + apikey)
-// //   // .then(response => {
 
-// //   // })
-// // }
-// // function search() {
-
-// //   if () {
-
-// //   }
-
-// // }
 document.getElementById("searchButton").addEventListener("click", getCords);
 document.getElementById("searchButton").addEventListener("click", makeList);

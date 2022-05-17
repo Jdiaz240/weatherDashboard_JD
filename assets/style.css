@@ -1,12 +1,13 @@
-textarea {
+input {
     width: 100%;
-    
 }
 
-button {
+#searchButton {
     background-color: lightskyblue;
     color: white;
     width: 100%;
+    border-radius: 25px;
+    margin-bottom: 2%;
 }
 
 #city {
@@ -37,4 +38,17 @@ h6 {
 #week {
     display: flex;
     flex-direction: row;
+}
+
+#history {
+    border: 1px black solid;
+    border-radius: 25px;
+    text-align: center;
+    list-style: none;
+    background-color: gray;
+    color: white;
+    font-family: sans-serif;
+    padding: 1.5%;
+    width: 60%;
+    margin: 2% auto;
 }
