@@ -19,10 +19,24 @@ function getWeather(lat, lon) {
       return response.json()
     }).then(data => {
       console.log(data)
-      console.log(data.current.temp) 
-      console.log(data.current.humidity)
-      console.log(data.current.wind_speed)
-      console.log(data.current.uvi)
+      var current = data.current
+      function fillInToday() {
+        var today = document.getElementById("weather-info")
+        var temp = document.getElementById("temp").append(current.temp)
+        var hum = document.getElementById("hum").append(current.humidity)
+        var wind = document.getElementById("wind").append(current.wind_speed)
+        var uv = document.getElementById("uvi").append(current.uvi)
+
+        for (let i = 1; i < 5; i++) { 
+          (data.daily[i].temp.day)
+          (data.daily[i].humidity)
+          (data.daily[i].wind_speed)
+          (data.daily[i].uvi)
+        }
+       
+      }
+      fillInToday();
+    
       //logout all values needed for weather
       // make function to call to put values on page
     })
@@ -30,8 +44,6 @@ function getWeather(lat, lon) {
       console.error(err);
     });
 }
-
-
 
 function getCords() {
   var city = document.getElementById("Bar").value;
@@ -46,7 +58,7 @@ function getCords() {
     .then(function (body) {
       const latitude = body[0].lat
       const longitude = body[0].lon
-      getWeather(latitude,longitude)
+      getWeather(latitude, longitude)
     })
 }
 
@@ -57,9 +69,11 @@ function makeList() {
   list.setAttribute("id", "history")
   list.append(city);
   document.getElementById("cities").appendChild(list);
-  
-  
-} 
+  document.getElementById("history").addEventListener("click", getCords);
+
+}
 
 document.getElementById("searchButton").addEventListener("click", getCords);
 document.getElementById("searchButton").addEventListener("click", makeList);
+
+
