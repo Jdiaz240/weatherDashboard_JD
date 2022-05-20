@@ -1,3 +1,6 @@
+dayjs.extend(window.dayjs_plugin_utc);
+dayjs.extend(window.dayjs_plugin_timezone);
+
 const searchHistory = [];
 const weatherApiUrl = "https://api.openweathermap.org/";
 const apikey = "f9045589f9bcbeef853eb7e06f209ddb";
@@ -28,15 +31,13 @@ function getWeather(lat, lon) {
         var uv = document.getElementById("uvi").append(current.uvi)
 
         for (let i = 1; i < 5; i++) { 
-          (data.daily[i].temp.day)
-          (data.daily[i].humidity)
-          (data.daily[i].wind_speed)
-          (data.daily[i].uvi)
-        }
-       
+          var dayTemp = document.getElementById("dayTemp").append(data.daily[i].temp.day)
+          var dayHum = document.getElementById("dayHum").append(data.daily[i].humidity)
+          var dayWind = document.getElementById("dayWind").append(data.daily[i].wind_speed)
+          var dayUv = document.getElementById("dayUv").append(data.daily[i].uvi)
+        }       
       }
-      fillInToday();
-    
+      fillInToday();    
       //logout all values needed for weather
       // make function to call to put values on page
     })
@@ -70,7 +71,6 @@ function makeList() {
   list.append(city);
   document.getElementById("cities").appendChild(list);
   document.getElementById("history").addEventListener("click", getCords);
-
 }
 
 document.getElementById("searchButton").addEventListener("click", getCords);
